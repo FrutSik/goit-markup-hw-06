@@ -16,6 +16,8 @@ a {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 p,
@@ -136,14 +138,18 @@ h6 {
 
 .hero-title {
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
+  /* font-size: 56px;
+  line-height: 1.07; */
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   color: #fff;
   text-align: center;
   margin: 0 auto;
-  max-width: 496px;
-  margin-bottom: 48px;
+  /* max-width: 496px;
+  margin-bottom: 48px; */
+  max-width: 216px;
+  margin-bottom: 72px;
 }
 
 .hero-btn {
@@ -230,13 +236,13 @@ h6 {
 
 .team {
   background-color: #f4f4fd;
-  padding: 120px 0;
+  padding: 96px 0;
 }
 
 .team-list {
-  justify-content: center;
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 72px;
 }
 
 .team-avatar {
@@ -248,7 +254,6 @@ h6 {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   background: #fff;
-  flex-basis: calc((100% - 72px) / 4);
 }
 
 .team-title {
@@ -317,8 +322,8 @@ h6 {
 /* ---------------PORTFOLIO-------------- */
 
 .portfolio {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .portfolio-title {
@@ -335,13 +340,12 @@ h6 {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
-  row-gap: 48px;
+  gap: 48px;
 }
 
 .portfolio-item {
-  width: calc((100% - 48px) / 3);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
 }
 
 .portfolio-item-picture {
@@ -412,7 +416,7 @@ h6 {
 
 .footer {
   background-color: #2e2f42;
-  padding: 100px 0;
+  padding: 96px 0;
 }
 
 .footer-text {
@@ -431,8 +435,9 @@ h6 {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
-  display: inline-block;
+  display: block;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .footer-logo-two {
@@ -446,6 +451,7 @@ h6 {
   letter-spacing: 0.02em;
   color: #fff;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .footer-cos-list {
@@ -466,11 +472,20 @@ h6 {
 
 .footer-conteiner-main {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
 }
 
 .footer-conteiner-text {
-  margin-right: 120px;
+  margin-bottom: 72px;
+}
+
+.footer-conteiner-cos {
+  margin-bottom: 72px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-cos-link:hover,
@@ -484,6 +499,7 @@ h6 {
 
 .footer-subscrube-form {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   flex-direction: row;
@@ -491,7 +507,6 @@ h6 {
 }
 
 .footer-subscrube-box {
-  margin-left: 80px;
 }
 
 .footer-form-text {
@@ -501,6 +516,7 @@ h6 {
   letter-spacing: 0.02em;
   color: #fff;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .footer-label-box {
@@ -519,7 +535,6 @@ h6 {
   letter-spacing: 0.04em;
   color: #fff;
   padding: 8px 0 8px 16px;
-
   outline: transparent;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -550,6 +565,12 @@ h6 {
 
 .footer-subscrube-btn:hover {
   background-color: #404bbf;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
 }
 
 .footer-btn-icon {
@@ -566,7 +587,7 @@ h6 {
 /* ---------------CONTAINER-------------- */
 
 .container {
-  width: 320px;
+  max-width: 320px;
   padding-left: 16px;
   padding-right: 16px;
   margin: 0 auto;
@@ -801,8 +822,18 @@ h6 {
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    max-width: 768px;
   }
+
+  /* ---------------HERO-------------- */
+  .hero-title {
+    font-size: 56px;
+    line-height: 1.07;
+    max-width: 496px;
+    margin-bottom: 48px;
+  }
+
+  /* ---------------HERO-------------- */
 
   /* ---------------FEATURES-------------- */
   .features-item {
@@ -818,12 +849,76 @@ h6 {
   }
 
   /* ---------------FEATURES-------------- */
+
+  /* ---------------TEAM-------------- */
+
+  .team-list {
+    gap: 64px 24px;
+    justify-content: center;
+  }
+
+  .team-item {
+    flex-basis: calc((100% - 24px) / 2);
+    max-width: 264px;
+  }
+
+  /* ---------------TEAM-------------- */
+
+  /* ---------------PORTFOLIO-------------- */
+
+  .portfolio-list {
+    gap: 72px 24px;
+    flex-wrap: wrap;
+  }
+
+  .portfolio-item {
+    width: calc((100% - 24px) / 2);
+  }
+
+  /* ---------------PORTFOLIO-------------- */
+
+  /* ---------------FOOTER-------------- */
+
+  .footer-logo-blue {
+    text-align: start;
+  }
+
+  .footer-text {
+    max-width: 264px;
+    margin-right: 24px;
+  }
+
+  .footer-conteiner-cos {
+    flex-direction: column;
+    align-items: baseline;
+  }
+
+  .footer-conteiner-main {
+    margin-left: 92px;
+  }
+
+  .footer-form-text {
+    text-align: start;
+  }
 }
 
 @media screen and (min-width: 1158px) {
   .container {
-    width: 1158px;
+    max-width: 1158px;
   }
+
+  /* ---------------HEADER-------------- */
+
+  /* ---------------HEADER-------------- */
+
+  /* ---------------HERO-------------- */
+  .hero-title {
+    font-size: 56px;
+    line-height: 1.07;
+    max-width: 496px;
+    margin-bottom: 48px;
+  }
+  /* ---------------HERO-------------- */
 
   /* ---------------FEATURES-------------- */
 
@@ -872,4 +967,89 @@ h6 {
   }
 
   /* ---------------FEATURES-------------- */
+
+  /* ---------------TEAM-------------- */
+
+  .team {
+    padding: 120px 0;
+  }
+
+  .team-list {
+    justify-content: center;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+
+  .team-item {
+    flex-basis: calc((100% - 72px) / 4);
+  }
+
+  .team-title {
+    padding-right: 0;
+  }
+
+  /* ---------------TEAM-------------- */
+
+  /* ---------------PORTFOLIO-------------- */
+
+  .portfolio {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .portfolio-list {
+    gap: 24px;
+    row-gap: 48px;
+  }
+
+  .portfolio-item {
+    width: calc((100% - 48px) / 3);
+  }
+
+  /* ---------------PORTFOLIO-------------- */
+
+  /* ---------------FOOTER-------------- */
+
+  .footer {
+    padding: 100px 0;
+  }
+
+  .footer-logo-blue {
+    display: inline-block;
+    text-align: start;
+  }
+
+  .footer-cos-text {
+    text-align: start;
+  }
+
+  .footer-conteiner-main {
+    flex-wrap: nowrap;
+  }
+
+  .footer-conteiner-text {
+    margin-right: 120px;
+  }
+
+  .footer-conteiner-cos {
+    display: block;
+    flex-wrap: nowrap;
+    align-items: start;
+    justify-content: start;
+  }
+
+  .footer-subscrube-form {
+    flex-wrap: nowrap;
+  }
+
+  .footer-subscrube-box {
+    margin-left: 80px;
+  }
+
+  .footer-form-text {
+    text-align: start;
+  }
+
+  /* ---------------FOOTER-------------- */
 }
