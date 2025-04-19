@@ -53,7 +53,6 @@ h6 {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
-  /* margin-right: 76px; */
   padding: 17.5px 0;
 }
 
@@ -98,9 +97,8 @@ h6 {
 }
 
 .header-address-list {
-  display: flex;
-  gap: 40px;
   display: none;
+  gap: 40px;
 }
 
 .header-address-one {
@@ -120,11 +118,21 @@ h6 {
   justify-content: space-between;
 }
 
+.menu-open-btn {
+  background-color: transparent;
+  border: none;
+}
+
 .mod-close-btn {
   border-radius: 100%;
-  fill: #e7e9fc;
-  stroke-width: 1px;
-  stroke: #2e2f42;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-bottom: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
 }
 
 .mod-menu {
@@ -134,29 +142,80 @@ h6 {
   position: fixed;
   top: 0;
   z-index: 10;
+  padding: 24px 24px 40px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
+
 .mod-list {
 }
-.mod-item {
+
+.mod-item:not(:last-child) {
+  margin-bottom: 40px;
 }
+
 .mod-link {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
 }
+
+.mod-link.current {
+  color: #404bbf;
+}
+
 .mod-address-main {
+  margin-bottom: 48px;
 }
+
 .mod-address-list {
 }
-.mod-address-item {
+
+.mod-address-item:not(:last-child) {
+  margin-bottom: 24px;
 }
+
 .mod-address-one {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #434455;
+  font-style: normal;
 }
+
+.mod-address-one.current {
+  color: #4d5ae5;
+}
+
 .mod-cos-list {
+  display: flex;
+  gap: 40px;
 }
+
 .mod-cos-item {
 }
+
 .mod-cos-link {
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .mod-cos-icon {
+  fill: #f4f4fd;
 }
+
 /* ---------------HEADER-------------- */
 
 /* ---------------HERO-------------- */
@@ -663,9 +722,9 @@ h6 {
 }
 
 .modal {
-  width: 408px;
-  min-height: 584px;
   border-radius: 4px;
+  width: 288px;
+  min-height: 623px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background-color: #fcfcfc;
@@ -679,7 +738,7 @@ h6 {
 
 .modal-form {
   border-radius: 4px;
-  width: 360px;
+  width: 256px;
   height: 336px;
 }
 
@@ -872,7 +931,41 @@ h6 {
   }
 
   /* ---------------HEADER-------------- */
+  .header-logo-blue {
+    margin-right: 76px;
+  }
 
+  .menu-open-btn {
+    visibility: hidden;
+  }
+
+  .mod-menu {
+    visibility: hidden;
+  }
+
+  .header-menu-list {
+    display: flex;
+    gap: 40px;
+  }
+
+  .header-address-main {
+    display: block;
+    margin-left: auto;
+  }
+
+  .header-address-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .header-address-one {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    padding: 0;
+  }
   /* ---------------HEADER-------------- */
 
   /* ---------------HERO-------------- */
@@ -968,6 +1061,20 @@ h6 {
   .footer-form-text {
     text-align: start;
   }
+
+  /* ---------------MODAL-------------- */
+  .modal {
+    border-radius: 4px;
+    width: 408px;
+    min-height: 584px;
+  }
+
+  .modal-form {
+    border-radius: 4px;
+    width: 360px;
+    height: 336px;
+  }
+  /* ---------------MODAL-------------- */
 }
 
 @media screen and (min-width: 1158px) {
@@ -977,6 +1084,12 @@ h6 {
 
   /* ---------------HEADER-------------- */
 
+  .header-address-list {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: unset;
+    gap: 40px;
+  }
   /* ---------------HEADER-------------- */
 
   /* ---------------HERO-------------- */
@@ -1139,4 +1252,18 @@ h6 {
   }
 
   /* ---------------FOOTER-------------- */
+
+  /* ---------------MODAL-------------- */
+  .modal {
+    width: 408px;
+    min-height: 584px;
+    border-radius: 4px;
+  }
+
+  .modal-form {
+    border-radius: 4px;
+    width: 360px;
+    height: 336px;
+  }
+  /* ---------------MODAL-------------- */
 }
