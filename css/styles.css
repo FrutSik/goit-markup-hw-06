@@ -222,7 +222,7 @@ h6 {
 
 .hero {
   background-color: #2e2f42;
-  padding: 188px 0;
+  padding: 72px 0;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -231,7 +231,7 @@ h6 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  max-width: 1440px;
+  max-width: 320px;
   margin: 0 auto;
 }
 
@@ -291,7 +291,7 @@ h6 {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .features {
@@ -348,6 +348,7 @@ h6 {
   display: flex;
   flex-wrap: wrap;
   gap: 72px;
+  justify-content: center;
 }
 
 .team-avatar {
@@ -632,7 +633,7 @@ h6 {
   border-radius: 4px;
   background-color: transparent;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  width: 264px;
+  width: 288px;
   height: 40px;
   font-weight: 400;
   font-size: 12px;
@@ -733,7 +734,7 @@ h6 {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 24px 16px;
 }
 
 .modal-form {
@@ -936,7 +937,7 @@ h6 {
   }
 
   .menu-open-btn {
-    visibility: hidden;
+    display: none;
   }
 
   .mod-menu {
@@ -973,10 +974,12 @@ h6 {
     font-size: 56px;
     line-height: 1.07;
     max-width: 496px;
-    margin-bottom: 48px;
+    margin-bottom: 36px;
   }
 
   .hero {
+    max-width: 768px;
+    padding: 112px 0;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -1046,20 +1049,27 @@ h6 {
 
   .footer-text {
     max-width: 264px;
-    margin-right: 24px;
   }
 
   .footer-conteiner-cos {
     flex-direction: column;
     align-items: baseline;
+    margin-bottom: 104px;
+  }
+  .footer-conteiner-text {
+    margin-right: 24px;
   }
 
   .footer-conteiner-main {
-    margin-left: 92px;
+    padding-left: 108px;
   }
 
   .footer-form-text {
     text-align: start;
+  }
+
+  .footer-subscrube-input {
+    width: 264px;
   }
 
   /* ---------------MODAL-------------- */
@@ -1067,6 +1077,7 @@ h6 {
     border-radius: 4px;
     width: 408px;
     min-height: 584px;
+    padding: 72px 24px 24px 24px;
   }
 
   .modal-form {
@@ -1090,6 +1101,12 @@ h6 {
     flex-direction: unset;
     gap: 40px;
   }
+
+  .header-address-one {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
   /* ---------------HEADER-------------- */
 
   /* ---------------HERO-------------- */
@@ -1101,6 +1118,8 @@ h6 {
   }
 
   .hero {
+    max-width: 1440px;
+    padding: 188px 0;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -1132,7 +1151,6 @@ h6 {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
-    margin-bottom: 8px;
   }
 
   .features-cos-box {
@@ -1226,13 +1244,16 @@ h6 {
 
   .footer-conteiner-main {
     flex-wrap: nowrap;
+    padding: 0 15px;
   }
 
   .footer-conteiner-text {
     margin-right: 120px;
+    margin-bottom: 0;
   }
 
   .footer-conteiner-cos {
+    margin-bottom: 0;
     display: block;
     flex-wrap: nowrap;
     align-items: start;
@@ -1241,6 +1262,10 @@ h6 {
 
   .footer-subscrube-form {
     flex-wrap: nowrap;
+  }
+
+  .footer-subscrube-input {
+    width: 264px;
   }
 
   .footer-subscrube-box {
@@ -1258,6 +1283,7 @@ h6 {
     width: 408px;
     min-height: 584px;
     border-radius: 4px;
+    padding: 72px 24px 24px 24px;
   }
 
   .modal-form {
